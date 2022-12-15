@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user.email.downcase!
     
     if @user.save
-      # If user saves in the db successfully:
       flash[:notice] = "Account created successfully!"
       redirect_to root_path
     else
