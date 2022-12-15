@@ -1,6 +1,4 @@
 class CategoriesController < ApplicationController
-
-  has_many :products
   
   def show
     @category = Category.find(params[:id])
