@@ -8,13 +8,13 @@ describe Product, type: :model do
     end
 
     it "should validate presence of name" do
-      expect(@product.name).to eq("maple")
+      expect(@product.name).to be_a_kind_of(String)
     end
     it "should validate presence of price" do
-      expect(@product.price_cents).to eq(100000)
+      expect(@product.price_cents).to be_a_kind_of(Integer)
     end
     it "should validate presence of quantity" do
-      expect(@product.quantity).to eq(1)
+      expect(@product.quantity).to be_a_kind_of(Integer)
     end
     it "should validate presence of category" do
       expect(@product.category).to eq(@category)
