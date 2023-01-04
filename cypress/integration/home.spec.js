@@ -5,7 +5,7 @@
 // check out the link below and learn how to write your first test:
 // https://on.cypress.io/writing-first-test
 
-describe("test", () => {
+describe("testing the home page", () => {
   it('should visit the home page', () => {
     cy.visit('localhost:3000')
   });
