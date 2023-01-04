@@ -1,24 +1,42 @@
-<h1>Sign Up</h1>
+<div class='login-container'>
+<h1 class='header'>Sign Up</h1>
 
 <%= form_for @user do |f| %>
-  <div>
+  <div class='name-input-container'>
+    <div class='name-title'>
     <%= f.label :name %>
+    </div>
+    <div class='name-input'>
     <%= f.text_field :name, autofocus: true %>
+    </div>
   </div>
-  <div>
+  <div class='email-input-container'>
+    <div>
     <%= f.label :email %>
+    </div>
+    <div>
     <%= f.text_field :email %>
+    </div>
   </div>
 
-  <div>
+  <div class='password-input'>
+    <div>
     <%= f.label :password %>
+    </div>
+    <div>
     <%= f.password_field :password %>
+    </div>
   </div>
-  <div>
+  <div class='confirm-password-input'>
+    <div>
     <%= f.label :password_confirmation %>
+    </div>
+    <div>
     <%= f.password_field :password_confirmation %>
+    <div>
   </div>
-  <div>
+  <div class='sign-up-button'>
     <%= f.submit "Sign up!" %>
   </div>
 <% end %>
+</div>
