@@ -4,10 +4,12 @@
     <h1>My Cart</h1>
   </header>
 
-  <% enhanced_cart.each do |item| %>
-    <% if !item %>
-      <h2> Cart is currently empty!</h2>
-      <a href="/"> Continue Shopping </a>
+
+    <% if enhanced_cart.length == 0 %>
+      <div>
+        <h2> Cart is currently empty!</h2>
+        <a href="/"> Continue Shopping </a>
+      </div>
     <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
@@ -20,6 +22,8 @@
         </tr>
       </thead>
       <tbody>
+    <% enhanced_cart.each do |item| %>
+
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
         </tbody>
@@ -52,6 +56,6 @@
           <% end %>
           </div>
           </div>
-          <% end %>
+        <% end %>
 
 </section>
